@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="backgroundColor">#EFEFEF</color>
+    <color name="categoryBackgroundColor">#D9D9D9</color>
+    
+    <color name="whiteColor">#FFF</color>
+    <color name="blackColor">#000</color>
+    
+    <!-- <color name="violetColor">#140838</color> -->
+    <color name="violetColor">#2B214C</color>
+    <color name="purpleColor">#452F91</color>
+    
+    <color name="redColor">#e30513</color>
+    
+    <color name="menucolor">#292929</color>
+    
+     <color name="searcgbgcolor">#525252</color>
+    <!--  Home Page Screen  -->
+    <color name="greyColor_editText_focused">#D9D9D9</color>
+    
+    <color name="headecolor">#f6f5f5</color>
+    <color name="txtcolorheadline">#12bbd8</color>
+      
+      
+      <color name="colorloadmorelist">#f6f4f5</color>
+      <color name="bgForSharingLayout">#12bbd8</color>
+    <!--  Login Screen-->
+    <!--  Forgot Password and Create Account Text color-->
+    <color name="greyColor">#646464</color>
+    <color name="greyColor_dark">#191919</color>
+    
+    <color name="greyColor_kakapay_chat">#4A7023</color>
+    <color name="borderForForum">#d7d8da</color>
+    <color name="grey">#ebeff0</color>
+    <color name="bluecolorforheader">#00368c</color>
+    <color name="blueColorMenu">#294596</color>
+    <color name="whiteColorTrns">#99FFFFFF</color>
+    <color name="blackTransparent">#66000000</color>
+    <color name="blurImage">#AA000000</color>
+</resources>

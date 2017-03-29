@@ -1,0 +1,474 @@
+[
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\splash.jpg",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\splash.jpg"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background_selected.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like_background_selected.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_3.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_3.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_inverse_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_inverse_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_profile_picture_blank_square.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_profile_picture_blank_square.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_10.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_10.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_2.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_2.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\items.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\items.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_top_button.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_top_button.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\menu_cone.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\menu_cone.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\category_selector.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\category_selector.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_blue_focused.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_blue_focused.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\list_fav_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\list_fav_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\bgforrecherche.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\bgforrecherche.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_usersettingsfragment_background_gradient.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_usersettingsfragment_background_gradient.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_blue_pressed.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_blue_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_icon_selected.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_list_pressed.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_list_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\menu_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\menu_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_loginbutton_silver.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_loginbutton_silver.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\horizontalselector.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\horizontalselector.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\progrsbarcolor.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\progrsbarcolor.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_profile_picture_blank_portrait.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_profile_picture_blank_portrait.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_1.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_1.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\bgforrecherchesearch.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\bgforrecherchesearch.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_check_on.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_check_on.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_7.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_7.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_logo.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_logo.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_list_divider.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_list_divider.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\menu_nav_bg.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\menu_nav_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\application_bg.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\application_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_check.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_check.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\transparent_image.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\transparent_image.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_list_selector_disabled.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_list_selector_disabled.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_close.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_close.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_list_focused.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_list_focused.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_4.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_4.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_profile_default_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_profile_default_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\mail_edt_grey_bg.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\mail_edt_grey_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_grey_normal.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_grey_normal.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_player_play_btn.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\radio_player_play_btn.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_selected.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like_selected.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_8.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_8.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\category_selected.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\category_selected.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\selectr_for_listitems.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\selectr_for_listitems.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\background_round_shape.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\background_round_shape.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_list_selector_background_transition.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_list_selector_background_transition.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_blue_normal.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_blue_normal.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_list_section_header_background.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_list_section_header_background.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_list_longpressed.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_list_longpressed.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_grey_focused.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_grey_focused.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_place_default_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_place_default_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\radio_player_pause_btn.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\radio_player_pause_btn.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_top_background.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_top_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like_background.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_5.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_5.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_top_button.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_top_button.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\category_selector_textview.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\category_selector_textview.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_list_selector.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_list_selector.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\espace_6.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\espace_6.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_pressed.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_like_pressed.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.0.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\sleeve_image_fram.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\sleeve_image_fram.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\share_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\share_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_picker_item_background.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_picker_item_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_grey_pressed.9.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_grey_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_blue.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_blue.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\alert_close_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\alert_close_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_check_off.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\exploded-aar\\Radio Espace\\facebookSDK\\unspecified\\res\\drawable\\com_facebook_button_check_off.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_espace.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\RadioEspace\\src\\main\\res\\drawable\\icon_espace.png"
+    }
+]

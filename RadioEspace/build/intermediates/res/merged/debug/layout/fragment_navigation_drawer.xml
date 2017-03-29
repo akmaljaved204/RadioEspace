@@ -1,0 +1,498 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_nav_bg"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/relatieMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <RelativeLayout
+                android:id="@+id/relativCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/relativeSearch"
+                android:layout_centerHorizontal="true" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeEcoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp" >
+
+
+                    <TextView
+                        android:id="@+id/txtRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Radios"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtfavourite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_below="@+id/txtRadio"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Favoris"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+
+
+                    <TextView
+                        android:id="@+id/txttopten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_below="@+id/txtfavourite"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Top 10"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtBrodcast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txttopten"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Podcast"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeALaUne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeEcoute"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10dp" >
+
+                    <TextView
+                        android:id="@+id/txtAlaUne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="10dp"
+                        android:text="A la Une"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtcolorheadline" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeline2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/txtAlaUne"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtAlaUne"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/whiteColor" >
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtNews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/relativeline2"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Actualités123"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtBonPlans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/txtNews"
+
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Bon Plans"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtProgramms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/txtBonPlans"
+
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Grille des programmes"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtSons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/txtProgramms"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Sons"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/txtSons"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:text="Vidéos"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtconcors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/txtVideo"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Concours"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtAgenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline2"
+                        android:layout_alignRight="@+id/relativeline2"
+                        android:layout_below="@+id/txtconcors"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:text="Agenda"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeMaRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeALaUne"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10dp" >
+
+                    <TextView
+                        android:id="@+id/txtMaRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Ma Radio"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtcolorheadline" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeline3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/txtMaRadio"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtMaRadio"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/whiteColor" >
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/txtdifusses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline3"
+                        android:layout_alignRight="@+id/relativeline3"
+                        android:layout_below="@+id/relativeline3"
+
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Titres diffusés"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtfrequencies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline3"
+                        android:layout_alignRight="@+id/relativeline3"
+                        android:layout_below="@+id/txtdifusses"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Fréquences"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline3"
+                        android:layout_alignRight="@+id/relativeline3"
+                        android:layout_below="@+id/txtfrequencies"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Contact"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtPlus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline3"
+                        android:layout_alignRight="@+id/relativeline3"
+                        android:layout_below="@+id/txtContact"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Plus"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativePlus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeMaRadio"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:paddingBottom="10dp" >
+
+                    <TextView
+                        android:id="@+id/txtCompete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Plus"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtcolorheadline" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeline4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/txtCompete"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtCompete"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/whiteColor" >
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtMonCompete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/relativeline4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Mon Compte"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtNewsLetter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtMonCompete"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Inscris-toi à la Newsletter"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtWebSite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtNewsLetter"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Site Web"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtFacebookShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtWebSite"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Generations sur Facebook"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtTwitterShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtFacebookShare"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Generations sur Twitter"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtGooglePlusShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtTwitterShare"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Generations sur Google+"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtInstagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtGooglePlusShare"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Generations sur Instagram"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtLegales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/relativeline4"
+                        android:layout_alignRight="@+id/relativeline4"
+                        android:layout_below="@+id/txtInstagram"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Mentions légales"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/whiteColor" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/menu_cone" />
+
+            <RelativeLayout
+                android:id="@+id/relativeSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <SearchView
+                    android:id="@+id/srchFromNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="bottom"
+                    android:iconifiedByDefault="false"
+                    android:layout_marginRight="20dp"
+                    android:textColorHint="#f7b8b1"
+                    android:queryHint="Rechercher " >
+                </SearchView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

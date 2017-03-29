@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "egingenierie.radioespace"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 5
+        versionName "1.2"
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+repositories {
+    maven { url 'http://repo.appspanel.com/appspanel-sdk-android/' }
+    maven {
+        url 'https://bitbucket.org/devmobile/maven-repo-public/raw/master/repository/'
+    }
+}
+
+dependencies {
+    compile project(':facebookSDK')
+    compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/tape-1.2.3.jar')
+    compile files('libs/eStat-SDK-5.12.jar')
+    compile 'jp.wasabeef:picasso-transformations:2.1.2'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.google.android.gms:play-services-ads:10.0.0'
+    compile 'com.google.android.gms:play-services-analytics:10.0.0'
+    compile 'com.google.android.gms:play-services-plus:10.0.0'
+    compile 'com.appspanel.android:sdk:4.3.2'
+    compile 'com.hcnx:hello:2.1'
+    compile 'com.google.firebase:firebase-messaging:10.0.0'
+}

@@ -1,0 +1,42 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+         
+    </style>
+
+    
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+     <style name="AnimationTopInTopOut">
+	    <item name="@android:windowEnterAnimation">@anim/slide_top_in</item>
+	    <item name="@android:windowExitAnimation">@anim/slide_top_out</item>
+	</style>
+     <style name="AnimationPopup">
+	    <item name="@android:windowEnterAnimation">@anim/slide_bottum_in</item>
+	    <item name="@android:windowExitAnimation">@anim/slide_bottum_out</item>
+	</style>
+	<style name="AnimationRightToLeft">
+	    <item name="@android:windowEnterAnimation">@anim/slide_left_in</item>
+	    <item name="@android:windowExitAnimation">@anim/slide_right_out</item>
+	</style>
+	<style name="AnimationLeftToRight">
+	    <item name="@android:windowEnterAnimation">@anim/slide_right_in</item>
+	    <item name="@android:windowExitAnimation">@anim/slide_left_out</item>
+	</style>
+	<style name="AnimationBottomToUp">
+	    <item name="@android:windowEnterAnimation">@anim/slide_bottum_in</item>
+	    <item name="@android:windowExitAnimation">@anim/slide_bottum_out</item>
+	</style>
+
+</resources>

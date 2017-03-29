@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="24"
+    density="560dpi"
+    format="7"
+    timestamp="63819410491305"
+    token="-4499951868165379048" >
+
+    <task
+        name="javac"
+        duration="1047" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="3364" />
+    <task
+        name="verifier"
+        duration="1746" />
+
+    <artifact
+        location="E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\outputs\apk\RadioEspace-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="63819410491305" >
+        <artifact
+            location="E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\outputs\apk\RadioEspace-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

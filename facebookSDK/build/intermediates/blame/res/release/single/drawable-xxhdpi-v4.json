@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_pressed.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_pressed.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_background_selected.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_background_selected.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_icon.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_icon.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_background.png",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_background.png"
+    }
+]

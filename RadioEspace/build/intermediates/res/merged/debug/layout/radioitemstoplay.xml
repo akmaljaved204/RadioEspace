@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/headecolor"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutImageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:id="@+id/imgRadioPicture"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/transparent_image" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtRadioName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/txtRadioDescription"
+            android:layout_alignTop="@+id/RelativeLayoutImageContainer"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/RelativeLayoutImageContainer"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Radio Espace"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor" />
+
+        <TextView
+            android:id="@+id/txtRadioDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtRadioName"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/imgRadioFvrt"
+            android:layout_toRightOf="@+id/RelativeLayoutImageContainer"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="La musique revient vite "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blackColor" />
+
+        <ImageView
+            android:id="@+id/imgRadioFvrt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/list_fav_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/relativeMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/blackColor" >
+    </RelativeLayout>
+</RelativeLayout>

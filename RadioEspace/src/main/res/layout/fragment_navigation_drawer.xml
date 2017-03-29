@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_nav_bg"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/relatieMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/menu_cone" />
+
+            <RelativeLayout
+                android:id="@+id/relativeSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <SearchView
+                    android:id="@+id/srchFromNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="bottom"
+                    android:iconifiedByDefault="false"
+                    android:layout_marginRight="20dp"
+                    android:textColorHint="#f7b8b1"
+                    android:queryHint="Rechercher " >
+                </SearchView>
+            </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relativeEcoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeSearch"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp" >
+
+                    <TextView
+                        android:id="@+id/txtRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="Ma playlist"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtfavourite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_below="@+id/txtRadio"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Podcasts"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txttopten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_below="@+id/txtfavourite"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Infos"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtBrodcast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txttopten"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Émissions"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/txtBrodcast"
+                        android:text="Top Espace"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtBonPlans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtNews"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Titres diffusés"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtProgramms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtBonPlans"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Espace TV"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtSons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtProgramms"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Fréquences"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtSons"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Contact"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+
+                    <TextView
+                        android:id="@+id/txtconcors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtVideo"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="Plus"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/whiteColor" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
