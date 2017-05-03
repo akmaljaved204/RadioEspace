@@ -4,20 +4,20 @@
     <item android:id="@android:id/secondaryProgress">
         <clip>
             <shape>
-                    <solid android:color="#FFAFAF" />
+                    <solid android:color="#949494" />
             </shape>
         </clip>
 
-        <color android:color="#FFAFAF" />
+        <color android:color="#949494" />
     </item>
     <item android:id="@android:id/progress">
         <clip>
             <shape>
-                <solid android:color="#FFAFAF" />
+                <solid android:color="#949494" />
             </shape>
         </clip>
 
-        <color android:color="#FFAFAF" />
+        <color android:color="#949494" />
     </item>
 
 </layer-list>

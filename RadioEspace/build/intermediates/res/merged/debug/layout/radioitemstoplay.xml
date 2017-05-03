@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/blackColor">
+
+    <RelativeLayout
+        android:id="@+id/rlDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whiteColor">
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@+id/relativeMain"/>
 
     <RelativeLayout
         android:id="@+id/relativeMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/headecolor"
+        android:layout_below="@+id/rlDivider"
+        android:background="#33000000"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:layout_centerHorizontal="true">
 
         <RelativeLayout
             android:id="@+id/RelativeLayoutImageContainer"
@@ -19,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp" >
+            android:layout_marginTop="5dp">
 
             <ProgressBar
                 android:id="@+id/progressBar1"
@@ -39,54 +53,45 @@
                 android:src="@drawable/transparent_image" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/txtRadioName"
+        <RelativeLayout
+            android:id="@+id/rlCenter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/txtRadioDescription"
-            android:layout_alignTop="@+id/RelativeLayoutImageContainer"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/RelativeLayoutImageContainer"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:text="Radio Espace"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/blackColor" />
+            android:layout_centerHorizontal="true">
 
-        <TextView
-            android:id="@+id/txtRadioDescription"
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSteamContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtRadioName"
-            android:layout_marginLeft="10dp"
-            android:layout_toLeftOf="@+id/imgRadioFvrt"
-            android:layout_toRightOf="@+id/RelativeLayoutImageContainer"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:text="La musique revient vite "
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/blackColor" />
-
-        <ImageView
-            android:id="@+id/imgRadioFvrt"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/list_fav_icon" />
-    </RelativeLayout>
+            android:layout_toRightOf="@+id/rlCenter">
 
-    <RelativeLayout
-        android:id="@+id/relativeLine"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/relativeMain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@color/blackColor" >
+            <TextView
+                android:id="@+id/txtRadioName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Radio Espace"
+                android:textColor="@color/whiteColor"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtRadioDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRadioName"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="La musique revient vite "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/whiteColor" />
+
+        </RelativeLayout>
+
     </RelativeLayout>
 </RelativeLayout>

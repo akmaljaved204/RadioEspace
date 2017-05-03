@@ -26,6 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import egingenierie.radioespace.adapter.AdapterForRadio;
@@ -34,6 +35,7 @@ import egingenierie.radioespace.model.DataLoader;
 import egingenierie.radioespace.model.Message;
 import egingenierie.radioespace.model.Radio;
 import egingenierie.radioespace.network.APIDataLoader;
+import egingenierie.radioespace.network.APIForSearch;
 import egingenierie.radioespace.network.RestClient;
 import egingenierie.radioespace.popup.ReadMorePopUp;
 import egingenierie.radioespace.radiostreeming.RadioPlayer;
@@ -54,12 +56,10 @@ import com.google.android.gms.analytics.Tracker;
 
 public class RadioHomePage extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks, OnClickListener, OnItemClickListener, DataLoader {
 
-    private NavigationDrawerFragment mNavigationDrawerFragment;
+    public NavigationDrawerFragment mNavigationDrawerFragment;
     private Button btnOpenDrawer;
     public List<Radio> lstForRadio = new ArrayList<Radio>();
-    public List<Radio> favoritesRadioArray = new ArrayList<Radio>();
     private ListView lstViewRadio;
-    private String flag = "Radio";
     public Library library;
     public String mediaUrl;
     private boolean isAppRunning = true;
@@ -71,11 +71,13 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
     private AdView mAdView;
     private InterstitialAd interstitialAd;
     private AdapterForRadio radioAdapter;
+    private TextView txtRadioName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Constants.POPUPCONTEXT = this;
+        radioHomePage = this;
         Estat.init(this);
         //Creation du tagger mediametrie
         EstatAudienceTagger audienceTagger = Estat.getAudience("298098214380");
@@ -93,34 +95,16 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
         tracker.enableAdvertisingIdCollection(true);
         tracker.enableAutoActivityTracking(true);
         radioAdapter = new AdapterForRadio(this, android.R.layout.simple_list_item_1, lstForRadio);
-
         accesDataBase = AccesDataBase.getDataBaseAcces();
-        flag = getIntent().getStringExtra("From");
         Constants.ACTIVITY_CONTEXT = this;
         btnOpenDrawer = (Button) findViewById(R.id.btnOpenDrawer);
-        mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.navigation_drawer);
-
-        mNavigationDrawerFragment.setUp(R.id.navigation_drawer,
-                (DrawerLayout)
-
-                        findViewById(R.id.drawer_layout),
-
-                (RelativeLayout)
-
-                        findViewById(R.id.container),
-
-                RadioHomePage.this);
-        lstViewRadio = (ListView)
-
-                findViewById(R.id.lstRadio);
-
+        mNavigationDrawerFragment = (NavigationDrawerFragment)getFragmentManager().findFragmentById(R.id.navigation_drawer);
+        mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout),(RelativeLayout)findViewById(R.id.container),RadioHomePage.this);
+        lstViewRadio = (ListView)findViewById(R.id.lstRadio);
+        txtRadioName = (TextView)findViewById(R.id.txtTitleOfRadio);
         lstViewRadio.setOnItemClickListener(this);
-
         btnOpenDrawer.setOnClickListener(this);
-        loadFavoritesRadio();
-        getRadioList(flag);
-        radioHomePage = (RadioHomePage) this;
+        getRadioList();
         mAdView = (AdView)findViewById(R.id.adView);
         mAdView.setVisibility(View.GONE);
         mAdView.setAdListener(new AdListener() {
@@ -138,22 +122,17 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
         );
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
         new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            if (interstitialAd != null) {
-                                                interstitialAd.show();
-                                            }
-                                        }
-                                    }
-
-                                , 10000);
+                @Override
+                public void run() {
+                    if (interstitialAd != null) {
+                        interstitialAd.show();
+                    }
+                }
+            }
+        , 10000);
         tracker.setScreenName("Radio Espace Screen");
-        tracker.send(new HitBuilders.ScreenViewBuilder().
-                build()
-        );
-
+        tracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
     private void loadIntersicialAd() {
@@ -192,42 +171,18 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
         SocialSharing.getSocialSharing().shareonSocialMedia(RadioHomePage.this, lstForRadio.get(0).getArtistName(), lstForRadio.get(0).getSongName(), imageURL);
     }
 
-    public void setLoggingInAdapter(int position) {
-        if (position == 0) {
-            for (int i = 0; i < lstForRadio.size(); i++) {
-                lstForRadio.get(i).setLogedIn(false);
-            }
-        } else {
-            for (int i = 0; i < lstForRadio.size(); i++) {
-                lstForRadio.get(i).setLogedIn(true);
-            }
-        }
-        refreshAdapter();
-    }
 
-    public void loadFavoritesRadio() {
-        favoritesRadioArray.clear();
-        favoritesRadioArray = accesDataBase.getFavoritesRadio();
-    }
-
-    public void getRadioList(String from) {
+    public void getRadioList() {
         lstForRadio.clear();
-        this.flag = from;
-        if (flag != null) {
-            if (flag.equals("Radio")) {
-                if (library.haveNetworkConnection()) {
-                    new APIDataLoader(this, "webradio");
-                } else {
-                    Toast.makeText(this, "No Internet Connection", Toast.LENGTH_LONG).show();
-                }
-            }
+        if (library.haveNetworkConnection()) {
+            new APIDataLoader(this, "webradio");
+        } else {
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_LONG).show();
         }
     }
 
     private void setAdapter() {
-        if (flag.equals("Radio")) {
-            lstViewRadio.setAdapter(radioAdapter);
-        }
+        lstViewRadio.setAdapter(radioAdapter);
     }
 
     @Override
@@ -257,18 +212,13 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
             JSONArray jsonArray = jsonObject.getJSONArray("content");
             lstForRadio.clear();
             for (int i = 0; i < jsonArray.length(); i++) {
-                Radio redio = new Radio(jsonArray.getJSONObject(i));
-                for (int k = 0; k < favoritesRadioArray.size(); k++) {
-                    if (redio.getId() == favoritesRadioArray.get(k).getId()) {
-                        redio.setFavorite(true);
-                        break;
-                    }
-                }
-                lstForRadio.add(redio);
+                lstForRadio.add(new Radio(jsonArray.getJSONObject(i)));
             }
             lstForRadio.add(0, lstForRadio.get(0));
+            txtRadioName.setText(lstForRadio.get(0).getTitle());
             RadioPlayer.getRadioPlayer().startRadio(lstForRadio.get(0).getFlux_mp3());
             lstForRadio.get(0).setRadioPlaying(true);
+            mNavigationDrawerFragment.refreshMiniPlayer();
             setAdapter();
             loadSelectedRadioStreamData();
             loadLiveStreamData();
@@ -282,8 +232,9 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
 
     @Override
     public void datOnError(Message message) {
-        // TODO Auto-generated method stub
+
     }
+
 
     public void setSelectionOfRadio() {
         try {
@@ -305,6 +256,7 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
                 }
                 lstForRadio.get(position).setRadioPlaying(true);
                 lstForRadio.set(0, lstForRadio.get(position));
+                txtRadioName.setText(lstForRadio.get(position).getTitle().trim());
                 refreshAdapter();
                 loadSelectedRadioStreamData();
                 setSelectionOfRadio();
@@ -319,7 +271,8 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
             @Override
             public void run() {
                 if (lstViewRadio != null) {
-                    radioAdapter.notifyDataSetChanged();
+                    ((AdapterForRadio)lstViewRadio.getAdapter()).notifyDataSetChanged();
+                    mNavigationDrawerFragment.refreshMiniPlayer();
                 }
             }
         });
@@ -331,7 +284,6 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
         } else {
             lstForRadio.get(position).setFavorite(true);
             accesDataBase.makeRadioFavorite(lstForRadio.get(position));
-            favoritesRadioArray.add(lstForRadio.get(position));
             refreshAdapter();
         }
     }
@@ -339,30 +291,13 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
     private void removeFromFavorite(int position) {
         lstForRadio.get(position).setFavorite(false);
         accesDataBase.removeFavorite(lstForRadio.get(position).getId());
-        for (int i = 0; i < favoritesRadioArray.size(); i++) {
-            if (favoritesRadioArray.get(i).getId() == lstForRadio.get(position).getId()) {
-                favoritesRadioArray.remove(i);
-                break;
-            }
-        }
-        refreshAdapter();
-    }
 
-    public void removeFavorite(int id) {
-        for (int i = 0; i < lstForRadio.size(); i++) {
-            if (lstForRadio.get(i).getId() == id) {
-                lstForRadio.get(i).setFavorite(false);
-                if (i != 0) {
-                    break;
-                }
-            }
-        }
         refreshAdapter();
     }
 
     public void messageBox(final int position) {
         AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
-        alertbox.setTitle("ODS");
+        alertbox.setTitle(getResources().getString(R.string.app_name));
         alertbox.setMessage("Désirez vous enlever cette radio de vos favoris ?");
         alertbox.setPositiveButton("OUI", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface arg0, int arg1) {
@@ -413,7 +348,6 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
                                     lstForRadio.get(i).setArtistName(jsonObject.getString("artist"));
                                     lstForRadio.get(i).setSongName(jsonObject.getString("title"));
                                     refreshAdapter();
-
                                 }
                             }
                         } catch (Exception e) {
@@ -500,7 +434,6 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
                             lstForRadio.get(0).setArtistName(artistName);
                             lstForRadio.get(0).setSongName(songName);
                             refreshAdapter();
-
                         }
                     }
 
@@ -536,7 +469,7 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
         runOnUiThread(new Runnable() {
             public void run() {
                 AlertDialog.Builder alertbox = new AlertDialog.Builder(RadioHomePage.this);
-                alertbox.setTitle("ODS Radio");
+                alertbox.setTitle(getResources().getString(R.string.app_name));
                 alertbox.setMessage(massage);
                 alertbox.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
@@ -621,6 +554,12 @@ public class RadioHomePage extends Activity implements NavigationDrawerFragment.
         super.onRestart();
         startTimerForScreens();
         Constants.POPUPCONTEXT = this;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mNavigationDrawerFragment.refreshMiniPlayer();
     }
 
     private static ReadMorePopUp alertPopUp;

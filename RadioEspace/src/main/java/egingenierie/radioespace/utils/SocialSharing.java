@@ -449,7 +449,7 @@ public class SocialSharing {
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
                     intent.setType("text/plain");
-                    intent.putExtra(Intent.EXTRA_SUBJECT, "ODS");
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Radio Espace");
                     intent.putExtra("android.intent.extra.TEXT", articleTitle + "\n" + context.getResources().getString(R.string.titleString) + "\n" + urlOfArticle + "\n" + "\n" + "");
                     intent.putExtra(Intent.EXTRA_STREAM, getLocalBitmapUri(bitmap, "image"));
                     context.startActivity(intent);
@@ -506,7 +506,7 @@ public class SocialSharing {
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
                     intent.setType("text/plain");
-                    intent.putExtra(Intent.EXTRA_SUBJECT, "ODS");
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Radio Espace");
                     intent.putExtra("android.intent.extra.TEXT", textToShare);
                     context.startActivity(intent);
                 }
@@ -557,7 +557,7 @@ public class SocialSharing {
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
                     intent.setType("text/plain");
-                    intent.putExtra(Intent.EXTRA_SUBJECT, "ODS");
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Radio Espace");
                     intent.putExtra("android.intent.extra.TEXT", context.getResources().getString(R.string.radioTitle) + "\n" + artestName + "\n" + songName + "\n" + context.getResources().getString(R.string.radioDetail) + "\n" + "\n" + "");
                     intent.putExtra(Intent.EXTRA_STREAM, getLocalBitmapUri(bitmap, "image"));
                     context.startActivity(intent);

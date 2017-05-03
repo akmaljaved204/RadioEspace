@@ -44,12 +44,12 @@
         "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\layout\\com_facebook_placepickerfragment.xml"
     },
     {
-        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_picker_list_section_header.xml",
-        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\layout\\com_facebook_picker_list_section_header.xml"
-    },
-    {
         "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
         "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\layout\\com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_picker_list_section_header.xml",
+        "source": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\src\\main\\res\\layout\\com_facebook_picker_list_section_header.xml"
     },
     {
         "merged": "E:\\Android\\StudioWorspace\\Radio Espace\\facebookSDK\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_search_bar_layout.xml",

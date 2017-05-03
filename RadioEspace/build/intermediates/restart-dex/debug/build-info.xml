@@ -4,27 +4,27 @@
     api-level="24"
     density="560dpi"
     format="7"
-    timestamp="63819410491305"
+    timestamp="320694003727488"
     token="-4499951868165379048" >
 
     <task
         name="javac"
-        duration="1047" />
+        duration="1475" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3364" />
+        duration="7754" />
     <task
         name="verifier"
-        duration="1746" />
+        duration="2983" />
 
     <artifact
         location="E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\outputs\apk\RadioEspace-debug.apk"
         type="MAIN" />
 
-    <build timestamp="63819410491305" >
+    <build timestamp="320694003727488" >
         <artifact
             location="E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\outputs\apk\RadioEspace-debug.apk"
             type="MAIN" />

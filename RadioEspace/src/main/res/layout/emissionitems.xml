@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+			android:paddingTop="10dp"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+             >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayoutImageContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true" >
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:id="@+id/imgForEmissionRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+					android:scaleType="fitXY"
+                    android:src="@drawable/transparent_image" />
+            </RelativeLayout>
+			<ImageView
+				android:id="@+id/imageView1"
+				android:layout_width="20dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="-10dp"
+				android:layout_below="@+id/txtNameOfEmission"
+				android:src="@drawable/emissions_dropdown" />
+            <TextView
+                android:id="@+id/txtNameOfEmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/RelativeLayoutImageContainer"
+                android:ellipsize="end"
+                android:text="Medium Text"
+				android:singleLine="true"
+				android:layout_alignParentLeft="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#99FFFFFF"
+				android:visibility="visible"
+                android:textStyle="bold"
+				android:layout_toLeftOf="@+id/imageView1"
+				android:layout_toStartOf="@+id/imageView1" />
+
+			<TextView
+			    android:id="@+id/txtSubtitle"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/txtNameOfEmission"
+			    android:layout_below="@+id/txtNameOfEmission"
+			    android:ellipsize="end"
+			    android:singleLine="true"
+			    android:text="Medium Text"
+			    android:visibility="visible"
+			    android:textAppearance="?android:attr/textAppearanceSmall"
+			    android:textColor="#99FFFFFF"
+				android:textStyle="bold"
+				android:layout_alignRight="@+id/txtNameOfEmission"
+				android:layout_alignEnd="@+id/txtNameOfEmission" />
+
+			<TextView
+			    android:id="@+id/txtDateTime"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/txtSubtitle"
+			    android:layout_alignRight="@+id/txtSubtitle"
+			    android:layout_below="@+id/txtSubtitle"
+			    android:ellipsize="end"
+			    android:text="Medium Text"
+				android:visibility="gone"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+			    android:textColor="#99FFFFFF" />
+
+			<TextView
+			    android:id="@+id/txtDetail"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/txtDateTime"
+			    android:layout_marginTop="5dp"
+			    android:ellipsize="end"
+			    android:text=""
+			    android:textAppearance="?android:attr/textAppearanceSmall"
+			    android:textColor="#99FFFFFF"
+			    android:visibility="visible" />
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginTop="5dp"
+				android:background="#99FFFFFF"
+				android:layout_below="@+id/txtDetail">
+
+			</RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

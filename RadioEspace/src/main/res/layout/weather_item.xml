@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlDayContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtDayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aujourd'hui"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#99FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/txtDayName"
+                android:text="(Mai 13)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#99FFFFFF" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lLDaysContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlDayContainer"
+            android:orientation="horizontal"
+            android:background="#99fac6b8"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtTimeName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Matin"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rmImageContainer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTimeName1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressLoader1"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/imgWeatherImage1"
+                        android:layout_width="56dp"
+                        android:layout_height="45dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/weather_default" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtDegreeValue1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rmImageContainer1"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Matin\n 11\u2103"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/blackColor" />
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/txtDegreeValue1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#bcbaba">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtTimeName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Midi"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rmImageContainer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTimeName2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressLoader2"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/imgWeatherImage2"
+                        android:layout_width="56dp"
+                        android:layout_height="45dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/weather_default" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtDegreeValue2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rmImageContainer2"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Matin\n 11C"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/blackColor" />
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/txtDegreeValue2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#bcbaba">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtTimeName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Après-midi"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rmImageContainer3"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtTimeName3"
+                    android:layout_centerHorizontal="true">
+
+                    <ProgressBar
+                        android:id="@+id/progressLoader3"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/imgWeatherImage3"
+                        android:layout_width="56dp"
+                        android:layout_height="45dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/weather_default" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtDegreeValue3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rmImageContainer3"
+                    android:gravity="center"
+                    android:text="Matin\n 11C"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/blackColor" />
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/txtDegreeValue3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#bcbaba">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/txtTimeName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Soir"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rmImageContainer4"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtTimeName4"
+                    android:layout_centerHorizontal="true">
+
+                    <ProgressBar
+                        android:id="@+id/progressLoader4"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/imgWeatherImage4"
+                        android:layout_width="56dp"
+                        android:layout_height="45dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/weather_default" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtDegreeValue4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rmImageContainer4"
+                    android:gravity="center"
+                    android:text="Matin\n 11C"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/blackColor"/>
+
+            </RelativeLayout>
+
+            <!--<LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#99FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#99FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#99FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#99FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+            </LinearLayout>-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

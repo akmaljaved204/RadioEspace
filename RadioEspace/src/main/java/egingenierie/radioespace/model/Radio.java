@@ -8,7 +8,7 @@ public class Radio {
 
     private int id, highlight, published, playlist_id;
     private String title, subtitle, category, file, picture, thumb_smartphone, background, border, slug, flux_aac, flux_mp3, url_player, url_win8, playlist, pubs, created_at, updated_at,
-            streamImage = "", artistName = "", songName = "", type, media_url;
+            streamImage = "test.test", artistName = "", songName = "", type, media_url;
     private boolean isRadioPlaying = false, isFavorite = false, isSelected = false, isLogedIn = false;
     private ArrayList<TitrusSubItems> children = new ArrayList<TitrusSubItems>();
     private NewsItems item = null;

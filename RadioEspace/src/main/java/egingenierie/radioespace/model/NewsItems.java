@@ -22,7 +22,7 @@ public class NewsItems implements Serializable {
     private String sharedTitle = "", sharedDescription = "";
     private int isFavourite;
     private boolean isExpanded = false;
-
+    private Weather weather;
     public NewsItems() {
 
     }
@@ -155,6 +155,14 @@ public class NewsItems implements Serializable {
             System.out.println("sad");
         }
 
+    }
+
+    public Weather getWeather() {
+        return weather;
+    }
+
+    public void setWeather(JSONObject object,String dayName,String mediaUrl) {
+        this.weather = new Weather(object,dayName,mediaUrl);
     }
 
     public boolean isExpanded() {

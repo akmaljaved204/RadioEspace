@@ -2,46 +2,12 @@
 <resources>
  
     <string name="app_name">Radio Espace</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
     <string name="banner_ad_unit_id">ca-app-pub-1307374885636076/3975964348</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="strngForComment">Connecte-toi et laisse un commentaire ! </string>
     <string name="app_id">1650150408593245</string>
-    <string name="radiosearch">Rechercher des titres sur Generations Radio</string>
-    <string name="radiosearchconnection">Connectez-vous pour rechercher sur lus 30 derniers jours </string>
-    <string name="emisssionText">Flash info / Météo toutes les heures.\n
-          Playlist Grands Standards et nouveautés Radio Espace and Soul\n
-          Les chroniques :\n
-          10:30 / 13:30 : Generations Culture</string>
-    <string name="radioTitle">J’écoute un titre sympa en ce moment sur l’application Radio Espace !</string>
-    <string name="radioDetail">L’application Radio Espace est disponible gratuitement pour Android, IOS, et WindowsPhone </string>
-    <string name="sizegreater"> Radio Espace – votre pièce jointe est trop lourde ! essayez sans </string>
-    <string name="articleTitle">Connectez-vous pour rechercher sur lus 30 derniers jours </string>
-    <string name="articleDetail">Connectez-vous pour rechercher sur lus 30 derniers jours </string>
-    <string name="alertsuccess">Radio Espace – Merci votre ALERTE a bien été envoyée!</string>
-    <string name="lesPlusTitle">J’ai découvert une radio EXCEPTIONNELLE !!!</string>
-    <string name="nointernetavailale">pas d\'internet disponible</string>
 
-    <string name="titleForSharing">pas d\'internet disponible</string>
-    <string name="detailForSharing">pas d\'internet disponible</string>
-    <string name="a">à</string>
-    <string name="lesPlusDetail">L’application Radio Espace est disponible gratuitement pour Android, Iphone et WindowsPhone </string>
-    <string name="fileNotUploadable"> Attention ! ce document ne pourra nous parvenir car il semble non valide.  </string>
-    <string name="permissionNotGranted"> Permission de ne pas accorder de lire les fichiers De Téléphone </string>
-    <string name="copyrights"> Vous êtes témoin d\'un évènement appelez la ligne rouge Radio Espace au 04 92 40 12 20 (numéro réservé seulement aux personnes ayant une info à nous communiquer, sinon appeler le 04 92 40 01 01) ou par mail à redaction@ods.com. </string>
-    <string name="wrngEmailCntct">Radio Espace - Votre email semble être non valide</string>
-    <string name="wrngJoinedFile">Attention ! ce document ne pourra nous parvenir car il semble non valide.</string>
-
+    <string name="radioTitle">J’écoute un podcast sympa en ce moment sur l’application RADIO ESPACE !</string>
+    <string name="radioDetail">L’application RADIO ESPACE est disponible gratuitement pour Android, IOS, et WindowsPhone</string>
     <string name="titleString">Article sympa trouvé sur l’application mobile Radio Espace :</string>
-    <string name="artcleText">Article sympa trouvé sur l’application mobile Radio Espace :</string>
-    <string name="detail">disponible aussi sur le site : http://www.radioespace.com</string>
-
-    <string name="AlertezALPES1">Alertez Radio Espace 1</string>
-    <string name="Contactezlaredaction">Contactez la rédaction</string>
-    <string name="Contactezlaradio">Contactez la radio</string>
-    <string name="Contactezlaregie">Contactez la régie</string>
-
 </resources>

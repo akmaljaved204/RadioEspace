@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:2:1-112:12
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:2:1-133:12
 	package
 		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml
@@ -854,7 +854,7 @@ ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidMa
 	android:name
 		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:36:22-81
 application
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:39:5-110:19
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:39:5-131:19
 MERGED from [Radio Espace:facebookSDK:unspecified] E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\intermediates\exploded-aar\Radio Espace\facebookSDK\unspecified\AndroidManifest.xml:24:5-20
 MERGED from [com.android.support:support-v4:25.1.0] E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.1.0] E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
@@ -1651,59 +1651,99 @@ service#egingenierie.radioespace.radiostreeming.PlaybackService
 ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:71:9-91
 	android:name
 		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:71:18-88
-activity#com.facebook.LoginActivity
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:73:9-77:75
+activity#egingenierie.radioespace.PodcastCategoryScreen
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:73:9-76:47
 	android:screenOrientation
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:76:13-49
-	android:label
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:75:13-45
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:75:13-49
 	android:theme
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:77:13-72
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:76:13-44
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:74:13-54
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:74:13-74
+activity#egingenierie.radioespace.PodcastHomeScreen
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:77:9-80:47
+	android:screenOrientation
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:79:13-49
+	android:theme
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:78:13-70
+activity#egingenierie.radioespace.EmissionActivity
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:81:9-84:47
+	android:screenOrientation
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:83:13-49
+	android:theme
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:84:13-44
+	android:name
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:82:13-69
+activity#egingenierie.radioespace.FrequenciesHomeScreen
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:86:9-89:47
+	android:screenOrientation
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:88:13-49
+	android:theme
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:89:13-44
+	android:name
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:87:13-74
+activity#egingenierie.radioespace.InfosScreen
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:90:9-93:47
+	android:screenOrientation
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:92:13-49
+	android:theme
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:93:13-44
+	android:name
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:91:13-64
+activity#com.facebook.LoginActivity
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:95:9-99:75
+	android:screenOrientation
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:98:13-49
+	android:label
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:97:13-45
+	android:theme
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:99:13-72
+	android:name
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:96:13-54
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:80:9-82:46
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:101:9-103:46
 	android:value
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:82:13-43
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:103:13-43
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:81:13-58
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:102:13-58
 service#com.hcnx.hello.reception.HNPushListenerService
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:84:9-90:19
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:105:9-111:19
 MERGED from [com.hcnx:hello:2.1] E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\intermediates\exploded-aar\com.hcnx\hello\2.1\AndroidManifest.xml:14:9-20:19
 	android:exported
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:86:13-37
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:107:13-37
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:85:13-74
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:106:13-74
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:87:13-89:29
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:108:13-110:29
 	android:priority
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:87:28-51
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:108:28-51
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:88:17-78
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:109:17-78
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:88:25-75
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:109:25-75
 service#com.hcnx.hello.reception.HNInstanceIDListenerService
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:93:9-97:19
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:114:9-118:19
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:93:18-85
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:114:18-85
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:94:13-96:29
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:115:13-117:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:95:17-80
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:116:17-80
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:95:25-77
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:116:25-77
 meta-data#com.hcnx.highnotif.default_ic_notif
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:100:9-102:49
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:121:9-123:49
 	android:value
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:102:13-46
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:123:13-46
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:101:13-63
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:122:13-63
 meta-data#com.hcnx.highnotif.default_title_notif
-ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:104:9-106:44
+ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:125:9-127:44
 	android:value
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:106:13-41
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:127:13-41
 	android:name
-		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:105:13-66
+		ADDED from E:\Android\StudioWorspace\Radio Espace\RadioEspace\src\main\AndroidManifest.xml:126:13-66
 activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
 ADDED from [com.google.android.gms:play-services-ads-lite:10.0.0] E:\Android\StudioWorspace\Radio Espace\RadioEspace\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\10.0.0\AndroidManifest.xml:26:9-131
 	android:theme

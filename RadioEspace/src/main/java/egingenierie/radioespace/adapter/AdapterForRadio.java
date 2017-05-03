@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -28,6 +29,7 @@ public class AdapterForRadio extends ArrayAdapter<Radio> {
     public Context context;
     private RadioHomePage radioHomePage;
     private Library library;
+    private LayoutInflater inflater;
 
     public AdapterForRadio(Context context, int textViewResourceId,
                            List<Radio> objects) {
@@ -35,6 +37,8 @@ public class AdapterForRadio extends ArrayAdapter<Radio> {
         this.context = context;
         library = new Library(context);
         radioHomePage = (RadioHomePage) context;
+        inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -42,31 +46,23 @@ public class AdapterForRadio extends ArrayAdapter<Radio> {
         View row;
         final Radio item = getItem(position);
         if (position == 0) {
-            LayoutInflater inflater = (LayoutInflater) context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = inflater.inflate(R.layout.radioplayingitemscreen, parent,
-                    false);
-            ImageView imgStreem = (ImageView) row
-                    .findViewById(R.id.imgRadioDashboardImage);
-            final ImageView btnPalyPause = (ImageView) row
-                    .findViewById(R.id.imagePayPause);
-            TextView txtRadioDec = (TextView) row
-                    .findViewById(R.id.txtRadioDescription);
-            TextView txtArtistName = (TextView) row
-                    .findViewById(R.id.txtArtistName);
-            TextView txtSongTile = (TextView) row
-                    .findViewById(R.id.txtArtstDescrp);
-            ImageView imgCurrentRadioFav = (ImageView) row.findViewById(R.id.imgCurrentRadioFav);
+            row = inflater.inflate(R.layout.radioplayingitemscreen, parent,false);
+            ImageView imgStreem = (ImageView) row.findViewById(R.id.imgRadioDashboardImage);
+            final ImageView btnPalyPause = (ImageView) row.findViewById(R.id.imagePayPause);
+            TextView txtRadioDec = (TextView) row.findViewById(R.id.txtRadioDescription);
+            TextView txtArtistName = (TextView) row.findViewById(R.id.txtArtistName);
+            TextView txtSongTile = (TextView) row.findViewById(R.id.txtArtstDescrp);
+            LinearLayout imgCurrentRadioFav = (LinearLayout) row.findViewById(R.id.llFavorite);
             ImageView imgBlure = (ImageView) row.findViewById(R.id.imageViewBlure);
-            /*RelativeLayout imgShareOnAll = (RelativeLayout) row.findViewById(R.id.rlShareButton);
+            LinearLayout imgShareOnAll = (LinearLayout) row.findViewById(R.id.llShare);
             imgShareOnAll.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
                     radioHomePage.shareRadioDetail();
                 }
-            });*/
+            });
             imgCurrentRadioFav.setOnClickListener(new OnFavoriteClick(position));
-           /* if (item.isFavorite()) {
+            /*if (item.isFavorite()) {
                 imgCurrentRadioFav.setImageResource(R.drawable.star_full);
             } else {
                 imgCurrentRadioFav.setImageResource(R.drawable.star_empty);
@@ -93,12 +89,12 @@ public class AdapterForRadio extends ArrayAdapter<Radio> {
                         radioHomePage.lstForRadio.get(0).setRadioPlaying(false);
                         RadioPlayer.getRadioPlayer().pauseRadio();
                         radioHomePage.refreshAdapter();
-                       // radioHomePage.viewMiniPlayer.refreshMiniPlayer();
+                        radioHomePage.mNavigationDrawerFragment.refreshMiniPlayer();
                     } else {
                         radioHomePage.lstForRadio.get(0).setRadioPlaying(true);
                         RadioPlayer.getRadioPlayer().playRadio();
                         radioHomePage.refreshAdapter();
-                       // radioHomePage.viewMiniPlayer.refreshMiniPlayer();
+                        radioHomePage.mNavigationDrawerFragment.refreshMiniPlayer();
                     }
                 }
             });
@@ -121,52 +117,51 @@ public class AdapterForRadio extends ArrayAdapter<Radio> {
             }
 
         } else {
-            LayoutInflater inflater = (LayoutInflater) context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = inflater.inflate(R.layout.radioitemstoplay, parent, false);
-            RelativeLayout lRelativeLayout = (RelativeLayout) row.findViewById(R.id.relativeMain);
-            ImageView imgRadioPicture = (ImageView) row
-                    .findViewById(R.id.imgRadioPicture);
-            TextView txtRadioName = (TextView) row
-                    .findViewById(R.id.txtRadioName);
-            TextView txtRadioDescription = (TextView) row
-                    .findViewById(R.id.txtRadioDescription);
-            ImageView imgRadioFvrt = (ImageView) row
-                    .findViewById(R.id.imgRadioFvrt);
-
-            if (item.isFavorite()) {
-                imgRadioFvrt.setBackgroundResource(R.drawable.list_fav_icon);
-            } else {
-                imgRadioFvrt.setBackgroundResource(R.drawable.list_fav_icon);
-            }
-            imgRadioFvrt.setOnClickListener(new OnFavoriteClick(position));
-
-            txtRadioName.setText(item.getTitle());
-            txtRadioName.setTypeface(library.robotoBold);
-            String temp = "";
-            if (!item.getArtistName().equals("")) {
-                temp = item.getArtistName();
-            }
-            if (!item.getSongName().equals("")) {
-                if (!temp.equals("")) {
-                    temp = temp + " - " + item.getSongName();
-                } else {
-                    temp = item.getSongName();
-                }
-            }
             if (item.isRadioPlaying()) {
-                lRelativeLayout.setBackgroundColor(Color.WHITE);
-            } else {
-                lRelativeLayout.setBackgroundColor(Color.parseColor("#f6f5f5"));
+                row = inflater.inflate(R.layout.radio_items_playing, parent, false);
+                ImageView imgRadioPicture = (ImageView) row.findViewById(R.id.imgRadioPicture);
+                ImageView imgItemImage = (ImageView) row.findViewById(R.id.imgItemImage);
+                Picasso.with(context)
+                        .load(radioHomePage.mediaUrl + item.getFile())
+                        .fit().centerInside().noFade()
+                        .placeholder(getImageResource(item.getId()))
+                        .error(getImageResource(item.getId()))
+                        .into(imgRadioPicture);
+                Picasso.with(context)
+                        .load(item.getStreamImage())
+                        .fit().centerInside()
+                        .transform(new BlurTransformation(context, 30, 1))
+                        .placeholder(getImageResource(item.getId()))
+                        .into(imgItemImage);
+            }else {
+                row = inflater.inflate(R.layout.radioitemstoplay, parent, false);
+                ImageView imgRadioPicture = (ImageView) row.findViewById(R.id.imgRadioPicture);
+                TextView txtRadioName = (TextView) row.findViewById(R.id.txtRadioName);
+                TextView txtRadioDescription = (TextView) row.findViewById(R.id.txtRadioDescription);
+                ImageView imgItemImage = (ImageView) row.findViewById(R.id.imgItemImage);
+                txtRadioName.setText(item.getArtistName());
+                txtRadioName.setTypeface(library.robotoBold);
+                txtRadioDescription.setText(item.getSongName());
+                txtRadioDescription.setTypeface(library.robotoLight);
+                if (item.getArtistName().equals("")) {
+                    txtRadioName.setVisibility(View.GONE);
+                }
+                if (item.getSongName().equals("")) {
+                    txtRadioDescription.setVisibility(View.GONE);
+                }
+                Picasso.with(context)
+                        .load(radioHomePage.mediaUrl + item.getFile())
+                        .fit().centerInside().noFade()
+                        .placeholder(getImageResource(item.getId()))
+                        .error(getImageResource(item.getId()))
+                        .into(imgRadioPicture);
+                Picasso.with(context)
+                        .load(item.getStreamImage())
+                        .fit().centerInside()
+                        .transform(new BlurTransformation(context, 30, 1))
+                        .placeholder(getImageResource(item.getId()))
+                        .into(imgItemImage);
             }
-            txtRadioDescription.setText(temp);
-            txtRadioDescription.setTypeface(library.robotoLight);
-            Picasso.with(context)
-                    .load(radioHomePage.mediaUrl + item.getFile())
-                    .fit().centerInside().noFade()
-                    .placeholder(getImageResource(item.getId()))
-                    .error(getImageResource(item.getId()))
-                    .into(imgRadioPicture);
         }
 
         return row;

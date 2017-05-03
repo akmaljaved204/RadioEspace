@@ -30,7 +30,10 @@ import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 import android.widget.TextView;
 
-import egingenierie.radioespace.utils.Constants;
+import com.squareup.picasso.Picasso;
+
+import egingenierie.radioespace.radiostreeming.RadioPlayer;
+import jp.wasabeef.picasso.transformations.BlurTransformation;
 
 public class NavigationDrawerFragment extends Fragment implements
         OnClickListener {
@@ -41,16 +44,17 @@ public class NavigationDrawerFragment extends Fragment implements
     private ActionBarDrawerToggle mDrawerToggle;
     View mDrawerListView;
     private DrawerLayout mDrawerLayout;
-    private RelativeLayout mDrawerListViewa;
+    private RelativeLayout mDrawerListViewa,rlMiniPlayer;
     private View mFragmentContainerView;
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
     private RelativeLayout relativeMain;
-    private TextView txtMaPlayList, txtPodcasts, txtInfos, txtEmission,txtTopEspace,txtdifusses,
+    private RelativeLayout txtMaPlayList, txtPodcasts, txtInfos, txtEmission,txtTopEspace,txtDifusses,
             txtEspaceTv,txtFreuency,txtContact,txtPlus;
     private SearchView search;
     Activity activity;
+    private RadioHomePage radioHomePage;
 
     public NavigationDrawerFragment() {
     }
@@ -91,16 +95,17 @@ public class NavigationDrawerFragment extends Fragment implements
         search = (SearchView) mDrawerListView.findViewById(R.id.srchFromNews);
         search.clearFocus();
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        txtMaPlayList= (TextView) mDrawerListView.findViewById(R.id.txtRadio);
-        txtPodcasts= (TextView) mDrawerListView.findViewById(R.id.txtfavourite);
-        txtInfos= (TextView) mDrawerListView.findViewById(R.id.txttopten);
-        txtEmission= (TextView) mDrawerListView.findViewById(R.id.txtBrodcast);
-        txtTopEspace= (TextView) mDrawerListView.findViewById(R.id.txtNews);
-        txtdifusses= (TextView) mDrawerListView.findViewById(R.id.txtBonPlans);
-        txtEspaceTv= (TextView) mDrawerListView.findViewById(R.id.txtProgramms);
-        txtFreuency= (TextView) mDrawerListView.findViewById(R.id.txtSons);
-        txtContact= (TextView) mDrawerListView.findViewById(R.id.txtVideo);
-        txtPlus= (TextView) mDrawerListView.findViewById(R.id.txtconcors);
+        txtMaPlayList= (RelativeLayout) mDrawerListView.findViewById(R.id.rlMaPlaylist);
+        txtPodcasts= (RelativeLayout) mDrawerListView.findViewById(R.id.rlPodcast);
+        rlMiniPlayer=(RelativeLayout)mDrawerListView.findViewById(R.id.rlMiniPlayerContainer);
+        txtInfos= (RelativeLayout) mDrawerListView.findViewById(R.id.rlInfos);
+        txtEmission= (RelativeLayout) mDrawerListView.findViewById(R.id.rlEmissions);
+        txtTopEspace= (RelativeLayout) mDrawerListView.findViewById(R.id.rlTopEspace);
+        txtDifusses= (RelativeLayout) mDrawerListView.findViewById(R.id.rlTitresdiffuses);
+        txtEspaceTv= (RelativeLayout) mDrawerListView.findViewById(R.id.rlEspaceTV);
+        txtFreuency= (RelativeLayout) mDrawerListView.findViewById(R.id.rlFrequences);
+        txtContact= (RelativeLayout) mDrawerListView.findViewById(R.id.rlContact);
+        txtPlus= (RelativeLayout) mDrawerListView.findViewById(R.id.rlPlus);
         search.setOnClickListener(this);
         int id = search.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
         TextView textView = (TextView) search.findViewById(id);
@@ -141,17 +146,17 @@ public class NavigationDrawerFragment extends Fragment implements
         closeButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                search.setQueryHint("Recherchez sur ODS");
+                search.setQueryHint("Rechercher");
                 search.setQuery("", false);
             }
         });
-
+        rlMiniPlayer.setOnClickListener(this);
         txtMaPlayList.setOnClickListener(this);
         txtPodcasts.setOnClickListener(this);
         txtInfos.setOnClickListener(this);
         txtEmission.setOnClickListener(this);
         txtTopEspace.setOnClickListener(this);
-        txtdifusses.setOnClickListener(this);
+        txtDifusses.setOnClickListener(this);
         txtEspaceTv.setOnClickListener(this);
         txtFreuency.setOnClickListener(this);
         txtContact.setOnClickListener(this);
@@ -165,11 +170,16 @@ public class NavigationDrawerFragment extends Fragment implements
                 && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
 
-    public void setUp(int fragmentId, DrawerLayout drawerLayout,
-                      RelativeLayout relativeLayout, Activity activity) {
+    public void setUp(int fragmentId, DrawerLayout drawerLayout, RelativeLayout relativeLayout, Activity activity) {
         mFragmentContainerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
         relativeMain = relativeLayout;
+        radioHomePage=RadioHomePage.getRadioHomePage();
+        context=activity;
+        initializeMiniPlayer();
+        if(!(activity instanceof RadioHomePage)){
+            refreshMiniPlayer();
+        }
         this.activity = activity;
         mDrawerLayout.setDrawerShadow(R.drawable.transparent_image,
                 GravityCompat.START);
@@ -295,7 +305,12 @@ public class NavigationDrawerFragment extends Fragment implements
 
     @Override
     public void onClick(View v) {
-        if (v == txtMaPlayList) {
+        if(v==rlMiniPlayer){
+            mDrawerLayout.closeDrawers();
+            if (!(getActivity() instanceof RadioHomePage)) {
+                getActivity().finish();
+            }
+        }else if (v == txtMaPlayList) {
             if (getActivity() instanceof RadioHomePage) {
                 // ((RadioHomePage) activity).getRadioList("Radio");
                 mDrawerLayout.closeDrawers();
@@ -304,146 +319,27 @@ public class NavigationDrawerFragment extends Fragment implements
                 getActivity().finish();
                 mDrawerLayout.closeDrawers();
             }
-        } else if (v == txtdifusses) {
-/*
-            if (!(getActivity() instanceof TitrusDifussesScreen)) {
-                Intent intent = new Intent(getActivity(),
-                        TitrusDifussesScreen.class);
+        } else if (v == txtPodcasts) {
+            if (!(getActivity() instanceof PodcastCategoryScreen)) {
+                Intent intent = new Intent(getActivity(),PodcastCategoryScreen.class);
                 startActivity(intent);
                 if (!(getActivity() instanceof RadioHomePage)) {
                     getActivity().finish();
                 }
             }
             mDrawerLayout.closeDrawers();
-
-        } else if (v == txttopten) {
-
-
-            if (getActivity() instanceof FavoriteRadio) {
-                ((FavoriteRadio) activity).getRadioList("TopTen");
-
-            } else {
-                Intent intent = new Intent(getActivity(), FavoriteRadio.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("From", "TopTen");
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (v == txtfavourite) {
-			
-
-		*//*	if (getActivity() instanceof FovouriteHomeScreen) {
-				((FavoriteRadio) activity).getRadioList("Favourite");
-			} else {
-				Intent intent = new Intent(getActivity(), FovouriteHomeScreen.class);*//*
-            Intent intent = new Intent(getActivity(), FavoriteRadio.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            if (!(getActivity() instanceof RadioHomePage)) {
-                getActivity().finish();
-            }
-            //}
-            mDrawerLayout.closeDrawers();
-        } else if (txtSons == v) {
-
-            if (getActivity() instanceof NewsActivity) {
-                ((NewsActivity) activity).getNewsRelatedData("Sons", "Menu");
-
-            } else {
-                Intent intent = new Intent(getActivity(), NewsActivity.class);
-                intent.putExtra("From", "Menu");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("ActivityFor", "Sons");
+        }  else if (txtEmission == v) {
+            if (!(getActivity() instanceof EmissionActivity)) {
+                Intent intent = new Intent(getActivity(),EmissionActivity.class);
                 startActivity(intent);
                 if (!(getActivity() instanceof RadioHomePage)) {
                     getActivity().finish();
                 }
             }
             mDrawerLayout.closeDrawers();
-        } else if (v == txtVideos) {
-
-
-            if (getActivity() instanceof NewsActivity) {
-                ((NewsActivity) activity).getNewsRelatedData("Videos", "Menu");
-
-            } else {
-                Intent intent = new Intent(getActivity(), NewsActivity.class);
-
-                intent.putExtra("From", "Menu");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("ActivityFor", "Videos");
-                startActivity(intent);
-
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (v == txtAgenda) {
-            if (getActivity() instanceof NewsActivity) {
-                ((NewsActivity) activity).getNewsRelatedData("Agenda", "Menu");
-            } else {
-                Intent intent = new Intent(getActivity(), NewsActivity.class);
-
-                intent.putExtra("From", "Menu");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("ActivityFor", "Agenda");
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-
-        } else if (imgHomePage == v) {
-            if (!(getActivity() instanceof RadioHomePage)) {
-                getActivity().finish();
-            } else {
-                mDrawerLayout.closeDrawers();
-            }
-        } else if (txtConcors == v) {
-            if (getActivity() instanceof NewsActivity) {
-                ((NewsActivity) activity)
-                        .getNewsRelatedData("Concours", "Menu");
-            } else {
-                Intent intent = new Intent(getActivity(), NewsActivity.class);
-                intent.putExtra("From", "Menu");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("ActivityFor", "Concours");
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (txtMonCompete == v) {
-            if (!(getActivity() instanceof MonCompeteEmailFeedback)) {
-                if (Constants.USER_ID.equals("")) {
-                    Intent intent = new Intent(getActivity(), MonCompeteEmailFeedback.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    mDrawerLayout.closeDrawers();
-                } else {
-                    Intent intent = new Intent(getActivity(), MonCompeteHomeScreen.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    mDrawerLayout.closeDrawers();
-                }
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (txtFreuency == v) {
-
-
+        }else  if (txtFreuency == v) {
             if (!(getActivity() instanceof FrequenciesHomeScreen)) {
-                Intent intent = new Intent(getActivity(),
-                        FrequenciesHomeScreen.class);
+                Intent intent = new Intent(getActivity(), FrequenciesHomeScreen.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
                 if (!(getActivity() instanceof RadioHomePage)) {
@@ -451,9 +347,9 @@ public class NavigationDrawerFragment extends Fragment implements
                 }
             }
             mDrawerLayout.closeDrawers();
-        } else if (txtNewLetter == v) {
-            if (!(getActivity() instanceof NewsLetterEmailFeedback)) {
-                Intent intent = new Intent(getActivity(), NewsLetterEmailFeedback.class);
+        }else if (txtInfos == v) {
+            if (!(getActivity() instanceof InfosScreen)) {
+                Intent intent = new Intent(getActivity(), InfosScreen.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
                 if (!(getActivity() instanceof RadioHomePage)) {
@@ -461,111 +357,8 @@ public class NavigationDrawerFragment extends Fragment implements
                 }
             }
             mDrawerLayout.closeDrawers();
-        } else if (txtWebsitePage == v) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://www.radioespace.com/"));
-            startActivity(browserIntent);
-            mDrawerLayout.closeDrawers();
-        } else if (txtFacebookPage == v) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://www.facebook.com/pages/G%C3%A9n%C3%A9rations/137991556245195?ref=ts"));
-            startActivity(browserIntent);
-            mDrawerLayout.closeDrawers();
-        } else if (txtTwitterPage == v) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://twitter.com/generations"));
-            startActivity(browserIntent);
-            mDrawerLayout.closeDrawers();
-        } else if (txtGoolePlusPage == v) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://plus.google.com/+generations/videos"));
-            startActivity(browserIntent);
-            mDrawerLayout.closeDrawers();
-        } else if (txtInstagramPage == v) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://www.instagram.com/generationsfm/"));
-            startActivity(browserIntent);
-            mDrawerLayout.closeDrawers();
-        } else if (txtMentionLegalePage == v) {
-            if (!(getActivity() instanceof MentionLegaleScreen)) {
-                Intent intent = new Intent(getActivity(), MentionLegaleScreen.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (txtEmission == v) {
-            if (getActivity() instanceof EmissionActivity) {
+        }else if (v == txtPlus) {
 
-            } else {
-                Intent intent = new Intent(getActivity(),
-                        EmissionActivity.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (search == v) {
-            search.setFocusable(true);
-        } else if (txtBrodcast == v) {
-            if (getActivity() instanceof PodcastCategoryScreen) {
-
-            } else {
-                Intent intent = new Intent(getActivity(),
-                        PodcastCategoryScreen.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (txtALAune == v) {
-            if (getActivity() instanceof ALaUneHomeFragment) {
-
-            } else {
-                Intent intent = new Intent(getActivity(),
-                        ALaUneHomeFragment.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (v == txtPlus) {
-            if (getActivity() instanceof SocialSharingFragment) {
-
-            } else {
-                Intent intent = new Intent(getActivity(),
-                        SocialSharingFragment.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (txtContact == v) {
-            if (getActivity() instanceof AlertActivity) {
-
-            } else {
-                Intent intent = new Intent(getActivity(),
-                        AlertActivity.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();
-        } else if (txtBonPlans == v) {
-            if (!(getActivity() instanceof BonPlansScreen)) {
-                Intent intent = new Intent(getActivity(), BonPlansScreen.class);
-                startActivity(intent);
-                if (!(getActivity() instanceof RadioHomePage)) {
-                    getActivity().finish();
-                }
-            }
-            mDrawerLayout.closeDrawers();*/
         }
     }
 
@@ -573,5 +366,82 @@ public class NavigationDrawerFragment extends Fragment implements
         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(search.getWindowToken(), 0);
 
+    }
+    private TextView txtArtistName,txtSongName,txtRadioTitle;
+    private ImageView imageViewBlure,imgRadioStreem,btnPlayPause;
+
+    private void initializeMiniPlayer(){
+        txtRadioTitle= (TextView)mDrawerListView.findViewById(R.id.txtRadioName);
+        txtArtistName = (TextView)mDrawerListView.findViewById(R.id.txtArtistName);
+        txtSongName = (TextView)mDrawerListView.findViewById(R.id.txtSongName);
+        txtArtistName.setTypeface(radioHomePage.library.robotoBold);
+        txtSongName.setTypeface(radioHomePage.library.robotoLight);
+        imageViewBlure= (ImageView)mDrawerListView.findViewById(R.id.imageViewBlure);
+        imgRadioStreem= (ImageView)mDrawerListView.findViewById(R.id.imgStreamImage);
+        btnPlayPause= (ImageView)mDrawerListView.findViewById(R.id.imagePayPause);
+        btnPlayPause.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(radioHomePage.lstForRadio.get(0).isRadioPlaying()){
+                    btnPlayPause.setBackgroundResource(R.drawable.radio_player_play_btn);
+                    radioHomePage.lstForRadio.get(0).setRadioPlaying(false);
+                    RadioPlayer.getRadioPlayer().pauseRadio();
+                    radioHomePage.refreshAdapter();
+
+                }else{
+                    btnPlayPause.setBackgroundResource(R.drawable.radio_player_pause_btn);
+                    radioHomePage.lstForRadio.get(0).setRadioPlaying(true);
+                    RadioPlayer.getRadioPlayer().playRadio();
+                    radioHomePage.refreshAdapter();
+
+                }
+            }
+        });
+    }
+    public void refreshMiniPlayer(){
+        if(radioHomePage.lstForRadio.size()>0){
+            txtRadioTitle.setText(radioHomePage.lstForRadio.get(0).getTitle().trim());
+            txtArtistName.setText(radioHomePage.lstForRadio.get(0).getArtistName());
+            txtSongName.setText(radioHomePage.lstForRadio.get(0).getSongName());
+            if(radioHomePage.lstForRadio.get(0).isRadioPlaying()){
+                btnPlayPause.setBackgroundResource(R.drawable.radio_player_pause_btn);
+            }else{
+                btnPlayPause.setBackgroundResource(R.drawable.radio_player_play_btn);
+            }
+            try {
+                Picasso.with(context)
+                        .load(radioHomePage.lstForRadio.get(0).getStreamImage())
+                        .fit().centerInside()
+                        .transform(new BlurTransformation(context, 20, 1))
+                        .placeholder(getImageResource(radioHomePage.lstForRadio.get(0).getId()))
+                        .into(imageViewBlure);
+            }catch (Exception ex){
+                System.out.print("");
+            }
+
+            try {
+                Picasso.with(context).load(radioHomePage.lstForRadio.get(0).getStreamImage())
+                        .fit().centerInside()
+                        .placeholder(getImageResource(radioHomePage.lstForRadio.get(0).getId()))
+                        .into(imgRadioStreem);
+            }catch (Exception ex){
+                System.out.print("");
+            }
+
+        }
+    }
+    private int getImageResource(int imagename) {
+        try {
+            String uri = "drawable/espace_" + imagename;
+            int imageResource = context.getResources().getIdentifier(uri,
+                    null, context.getPackageName());
+            if (imageResource > 0) {
+                return imageResource;
+            } else {
+                return R.drawable.icon_espace;
+            }
+        } catch (Exception e) {
+            return R.drawable.icon_espace;
+        }
     }
 }

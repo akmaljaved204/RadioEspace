@@ -1,178 +1,418 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_nav_bg">
+
+    <RelativeLayout
+        android:id="@+id/rlMiniPlayerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewBlure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rlContentContainer"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_espace" />
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33000000"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txtRadioName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="RADIO ESPACE"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fffbf5" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/menu_cone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlHeader"
+            android:background="#33000000"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/relatveImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayouttopImage"
+                android:layout_marginLeft="10dp"
+                android:background="#909090"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgStreamImage"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/relatveImg"
+                android:layout_toRightOf="@+id/relatveImg">
+
+                <ImageView
+                    android:id="@+id/imagePayPause"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/radio_player_pause_btn" />
+
+                <TextView
+                    android:id="@+id/txtArtistName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imagePayPause"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="Charlie Parker"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtSongName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/txtArtistName"
+                    android:layout_alignLeft="@+id/txtArtistName"
+                    android:layout_alignRight="@+id/txtArtistName"
+                    android:layout_below="@+id/txtArtistName"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="The Essential"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whiteColor" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlMiniPlayerContainer">
+
+        <SearchView
+            android:id="@+id/srchFromNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:enabled="false"
+            android:focusable="false"
+            android:gravity="bottom"
+            android:iconifiedByDefault="false"
+            android:queryHint="Rechercher "
+            android:textColorHint="#f7b8b1"></SearchView>
+    </RelativeLayout>
 
     <ScrollView
         android:id="@+id/scroller"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/menu_nav_bg"
+        android:layout_below="@+id/relativeSearch"
         android:fillViewport="true"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <RelativeLayout
             android:id="@+id/relatieMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" >
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/imageView1"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/menu_cone" />
+            android:layout_centerHorizontal="true">
 
             <RelativeLayout
-                android:id="@+id/relativeSearch"
+                android:id="@+id/relativeEcoute"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp" >
-
-                <SearchView
-                    android:id="@+id/srchFromNews"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:enabled="false"
-                    android:focusable="false"
-                    android:gravity="bottom"
-                    android:iconifiedByDefault="false"
-                    android:layout_marginRight="20dp"
-                    android:textColorHint="#f7b8b1"
-                    android:queryHint="Rechercher " >
-                </SearchView>
-            </RelativeLayout>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="10dp">
                 <RelativeLayout
-                    android:id="@+id/relativeEcoute"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/relativeSearch"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp" >
-
+                    android:padding="5dp"
+                    android:id="@+id/rlMaPlaylist">
                     <TextView
-                        android:id="@+id/txtRadio"
+                        android:id="@+id/txtMaPlayList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:padding="5dp"
                         android:text="Ma playlist"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlMaPlaylist"
+                    android:padding="5dp"
+                    android:id="@+id/rlPodcast">
                     <TextView
-                        android:id="@+id/txtfavourite"
+                        android:id="@+id/txtPodcast"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                       android:layout_below="@+id/txtRadio"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Podcasts"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
-
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlPodcast"
+                    android:padding="5dp"
+                    android:id="@+id/rlInfos">
                     <TextView
-                        android:id="@+id/txttopten"
+                        android:id="@+id/txtInfos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                       android:layout_below="@+id/txtfavourite"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Infos"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
-
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlInfos"
+                    android:padding="5dp"
+                    android:id="@+id/rlEmissions">
                     <TextView
-                        android:id="@+id/txtBrodcast"
+                        android:id="@+id/txtEmissions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txttopten"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Émissions"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlEmissions"
+                    android:padding="5dp"
+                    android:id="@+id/rlTopEspace">
 
                     <TextView
-                        android:id="@+id/txtNews"
+                        android:id="@+id/txtTopEspace"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_below="@+id/txtBrodcast"
                         android:text="Top Espace"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlTopEspace"
+                    android:padding="5dp"
+                    android:id="@+id/rlTitresdiffuses">
 
                     <TextView
-                        android:id="@+id/txtBonPlans"
+                        android:id="@+id/txtTitresdiffuses"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtNews"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Titres diffusés"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
-
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlTitresdiffuses"
+                    android:padding="5dp"
+                    android:id="@+id/rlEspaceTV">
                     <TextView
-                        android:id="@+id/txtProgramms"
+                        android:id="@+id/txtEspaceTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtBonPlans"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Espace TV"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
-
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlEspaceTV"
+                    android:padding="5dp"
+                    android:id="@+id/rlFrequences">
                     <TextView
-                        android:id="@+id/txtSons"
+                        android:id="@+id/txtFrequences"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtProgramms"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Fréquences"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlFrequences"
+                    android:padding="5dp"
+                    android:id="@+id/rlContact">
                     <TextView
                         android:id="@+id/txtVideo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtSons"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Contact"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
-
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlContact"
+                    android:padding="5dp"
+                    android:id="@+id/rlPlus">
                     <TextView
-                        android:id="@+id/txtconcors"
+                        android:id="@+id/txtPlus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtVideo"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:text="Plus"
-                        android:textStyle="bold"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/whiteColor" />
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/detail_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
             </RelativeLayout>
 
 

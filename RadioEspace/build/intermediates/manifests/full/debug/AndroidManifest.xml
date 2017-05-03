@@ -73,6 +73,26 @@
         <service android:name="egingenierie.radioespace.radiostreeming.PlaybackService" />
 
         <activity
+            android:name="egingenierie.radioespace.PodcastCategoryScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="egingenierie.radioespace.PodcastHomeScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="egingenierie.radioespace.EmissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="egingenierie.radioespace.FrequenciesHomeScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="egingenierie.radioespace.InfosScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.facebook.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

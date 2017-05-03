@@ -1,0 +1,96 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/application_bg">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/container2345"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/blackTransparent">
+
+                <Button
+                    android:id="@+id/btnOpenDrawer"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back_icon" />
+
+                <TextView
+                    android:id="@+id/txtTitleOfRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PODCASTS"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/whiteColor"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_toRightOf="@+id/btnOpenDrawer"
+                    android:layout_toEndOf="@+id/btnOpenDrawer" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeCenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/RelativeLayoutFoAd"
+                android:layout_below="@+id/relativeHeader"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/imgCategory"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/podcast_default"/>
+
+                <ListView
+                    android:id="@+id/lstPodcast"
+                    android:layout_below="@+id/imgCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent"
+                    android:divider="@null"
+                    android:scrollbars="none" >
+
+                </ListView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RelativeLayoutFoAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id"
+                    android:visibility="gone" >
+                </com.google.android.gms.ads.AdView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
