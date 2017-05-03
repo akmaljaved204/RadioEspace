@@ -34,7 +34,6 @@ public class LesPlusScreen extends Activity implements OnClickListener ,Navigati
 			partagerNoterLayout, surviveLyonmagLayout, surviveFacebookLayout, surviveTwitterLayout,rlForShreInstgrm,surviveGPlusLayout;
 	private Tracker tracker ;
 	public GoogleAnalytics analytics;
-	private  Button button1 ;
 	private Button btnOpenDrawer ;
 	private NavigationDrawerFragment mNavigationDrawerFragment;
 	@Override
@@ -56,7 +55,6 @@ public class LesPlusScreen extends Activity implements OnClickListener ,Navigati
 		rlForShreInstgrm = (RelativeLayout) findViewById(R.id.rlForShreInstgrm);
 		surviveGPlusLayout = (RelativeLayout) findViewById(R.id.surviveGPlusLayout);
 		btnOpenDrawer = (Button) findViewById(R.id.btnOpenDrawer);
-		button1 = (Button) findViewById(R.id.button1);
 		partagerEmailLayout.setOnClickListener(this);
 		partagerNoterLayout.setOnClickListener(this);
 		surviveLyonmagLayout.setOnClickListener(this);
@@ -65,7 +63,6 @@ public class LesPlusScreen extends Activity implements OnClickListener ,Navigati
 		rlForShreInstgrm.setOnClickListener(this);
 		surviveGPlusLayout.setOnClickListener(this);
 		btnOpenDrawer.setOnClickListener(this);
-		button1.setOnClickListener(this);
 		analytics = GoogleAnalytics.getInstance(getApplicationContext());
 		analytics.setLocalDispatchPeriod(1800);
 		tracker = analytics.newTracker(Constants.GOOGLE_ANALYTICS_KEY);
@@ -154,7 +151,7 @@ public class LesPlusScreen extends Activity implements OnClickListener ,Navigati
 			startActivity(browserIntent);
 		}else if(v==surviveLyonmagLayout){
 			Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-					Uri.parse(Constants.FACEBOOK_PAGE_LINK));
+					Uri.parse(Constants.WEB_LINK));
 			startActivity(browserIntent);
 		}else if(v==surviveFacebookLayout){
 			try {
