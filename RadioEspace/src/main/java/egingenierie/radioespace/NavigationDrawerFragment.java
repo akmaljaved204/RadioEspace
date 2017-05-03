@@ -358,7 +358,15 @@ public class NavigationDrawerFragment extends Fragment implements
             }
             mDrawerLayout.closeDrawers();
         }else if (v == txtPlus) {
-
+            if (!(getActivity() instanceof LesPlusScreen)) {
+                Intent intent = new Intent(getActivity(), LesPlusScreen.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                if (!(getActivity() instanceof RadioHomePage)) {
+                    getActivity().finish();
+                }
+            }
+            mDrawerLayout.closeDrawers();
         }
     }
 
